@@ -55,6 +55,22 @@
 	justify-content: space-evenly;
 }
 
-.editDeleteForm {
-	mar
+.showWrapper {
+	margin: 40px 100px;
+	width: 25%;
+}
+
+.showHeader {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.showDiv {
+	display: flex;
+}
+
+.showDiv p {
+	flex: 1;
 }

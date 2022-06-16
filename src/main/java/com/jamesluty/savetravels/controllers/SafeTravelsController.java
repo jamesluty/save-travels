@@ -41,6 +41,13 @@ public class SafeTravelsController {
 		return "edit.jsp";
 	}
 	
+	@GetMapping("/show/{id}")
+	public String show(@PathVariable("id") Long id, Model model) {
+		Expense expense = expenseService.getOne(id);
+		model.addAttribute("expense", expense);
+		return "show.jsp";
+	}
+	
 //	POST Routes
 	@PostMapping("/create")
 	public String create(@Valid @ModelAttribute("expense") Expense expense, BindingResult result) {
