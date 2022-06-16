@@ -47,4 +47,14 @@
 
 .editForm {
 	width: 100%;
+	margin-bottom: 20px;
+}
+
+.actionBtns{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.editDeleteForm {
+	mar
 }

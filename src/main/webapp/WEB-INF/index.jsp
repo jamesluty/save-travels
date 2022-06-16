@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="bodyWrapper">
-		<h1>Sage Travels</h1>
+		<h1>Safe Travels</h1>
 		<table class="table table-bordered table-striped">
 			<thead class="table-dark">
 				<tr>
@@ -28,10 +28,15 @@
 				<tr>
 					<td>${expense.name }</td>
 					<td>${expense.vendor }</td>
-					<td>${expense.amount }</td>
+					<td>$${expense.amount }</td>
 					<td>
-						<a class="btn btn-primary" href="/edit/${expense.id}">Edit</a>
-											
+						<div class="actionBtns">
+							<a class="btn btn-primary" href="/edit/${expense.id}">Edit</a>
+							<form action="/delete/${expense.id}" method="post">
+							    <input type="hidden" name="_method" value="delete">
+							    <input class="btn btn-danger" type="submit" value="Delete">
+							</form>				
+						</div>
 					</td>
 				</tr>			
 			</c:forEach>

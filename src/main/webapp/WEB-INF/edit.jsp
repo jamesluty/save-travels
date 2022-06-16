@@ -43,6 +43,10 @@
 				</div>
 				<button class="btn btn-primary">Edit</button>
 			</form:form>
+			<form action="/delete/${expense.id}" method="post">
+			    <input type="hidden" name="_method" value="delete">
+			    <input class="btn btn-danger" type="submit" value="Delete">
+			</form>	
 		</div>
 	</div>
 </body>
