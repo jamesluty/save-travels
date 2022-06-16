@@ -3,6 +3,7 @@ package com.jamesluty.savetravels.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jamesluty.savetravels.models.Expense;
@@ -10,13 +11,16 @@ import com.jamesluty.savetravels.repos.ExpenseRepo;
 
 @Service
 public class ExpenseService {
-	private final ExpenseRepo expenseRepo;
+//	private final ExpenseRepo expenseRepo;
+//	
+//	public ExpenseService(ExpenseRepo expenseRepo) {
+//		this.expenseRepo = expenseRepo;
+//	}
 	
-	public ExpenseService(ExpenseRepo expenseRepo) {
-		this.expenseRepo = expenseRepo;
-	}
+	@Autowired
+	private ExpenseRepo expenseRepo;
 	
-	public Expense createExpense(Expense expense) {
+	public Expense save(Expense expense) {
 		return expenseRepo.save(expense);
 	}
 	

@@ -8,3 +8,43 @@
 .bodyWrapper {
 	margin: 40px 100px;
 }
+
+.formDiv {
+	margin-left: 60px;
+	margin-top: 30px;
+}
+
+.formDiv h3{
+	margin-bottom: 20px;
+}
+.createForm {
+	width: 25%;
+}
+
+.formItem {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.formLabel, .formInput {
+	flex: 1;
+}
+
+.editWrapper {
+	margin: 40px 100px;
+	width: 25%
+}
+
+.editHeader {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.editFormDiv {
+	margin-top: 30px;
+}
+
+.editForm {
+	width: 100%;
+}

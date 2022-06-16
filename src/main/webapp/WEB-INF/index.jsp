@@ -8,7 +8,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 <title>Safe Travels</title>
 </head>
 <body>
@@ -20,6 +20,7 @@
 					<th>Expense</th>
 					<th>Vendor</th>
 					<th>Amount</th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -28,33 +29,38 @@
 					<td>${expense.name }</td>
 					<td>${expense.vendor }</td>
 					<td>${expense.amount }</td>
+					<td>
+						<a class="btn btn-primary" href="/edit/${expense.id}">Edit</a>
+											
+					</td>
 				</tr>			
 			</c:forEach>
 			</tbody>
 		</table>
-		<div>
-			<form:form action="/create" method="post" modelAttribute="expense">
-				<p>
-					<form:label path="name">Expense Name: </form:label>
-					<form:input path="name"/>
+		<div class="formDiv">
+			<h3>Add an Expense: </h3>
+			<form:form class="createForm" action="/create" method="post" modelAttribute="expense">
+				<div class="formItem">
+					<form:label class="formLabel" path="name">Expense Name: </form:label>
+					<form:input class="formInput" path="name"/>
 					<form:errors path="name"/>
-				</p>
-				<p>
-					<form:label path="vendor">Vendor: </form:label>
-					<form:input path="vendor"/>
+				</div>
+				<div class="formItem">
+					<form:label class="formLabel" path="vendor">Vendor: </form:label>
+					<form:input class="formInput" path="vendor"/>
 					<form:errors path="vendor"/>
-				</p>
-				<p>
-					<form:label path="amount">Amount: </form:label>
-					<form:input path="amount"/>
+				</div>
+				<div class="formItem">
+					<form:label class="formLabel" path="amount">Amount: </form:label>
+					<form:input class="formInput" type="number" path="amount"/>
 					<form:errors path="amount"/>
-				</p>
-				<p>
-					<form:label path="description">Description: </form:label>
-					<form:input path="description"/>
+				</div>
+				<div class="formItem">
+					<form:label class="formLabel" path="description">Description: </form:label>
+					<form:input class="formInput" path="description"/>
 					<form:errors path="description"/>
-				</p>
-				<button>Create</button>
+				</div>
+				<button class="btn btn-primary">Create</button>
 			</form:form>
 		</div>
 	</div>
