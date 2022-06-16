@@ -31,7 +31,7 @@ public class Expense {
 	@Size(min=1, message="Vendor is required!")
 	private String vendor;
 	
-	@NotNull(message="Amount is required")
+	@NotNull
 	@Min(value=1, message="Amount must be at least 1!")
 	private double amount;
 	
@@ -66,6 +66,7 @@ public class Expense {
 		this.updatedAt = new Date();
 	}
 
+//	Getters and Setters
 	public Long getId() {
 		return id;
 	}

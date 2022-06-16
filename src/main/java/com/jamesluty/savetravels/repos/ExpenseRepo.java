@@ -9,5 +9,5 @@ import com.jamesluty.savetravels.models.Expense;
 public interface ExpenseRepo extends CrudRepository<Expense, Long> {
 
 	// this method retrieves all the books from the database
-			List<Expense> findAll();
+	List<Expense> findAll();
 }
